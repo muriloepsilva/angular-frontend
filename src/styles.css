@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+@import "paleta-cores.css";
+
+body {
+  background: linear-gradient(to bottom, var(--cinza-claro), var(--branco))
+    no-repeat;
+  color: var(--preto);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Open Sans", sans-serif;
+}

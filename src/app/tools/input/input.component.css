@@ -1,0 +1,47 @@
+@import "../../../paleta-cores.css";
+
+.input-container {
+  display: flex;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+input {
+  border: 1px solid var(--preto);
+  border-radius: 5px;
+  color: var(--preto);
+  font-size: 15px;
+  padding: 10px 15px;
+  transition: border-color 0.3s ease;
+  width: 20em;
+  background-color: var(--branco);
+}
+
+input:focus {
+  border-width: 2px;
+  border-color: var(--preto);
+  outline: none;
+}
+
+label {
+  background: var(--branco);
+  color: var(--preto);
+  font-size: 16px;
+  left: 10px;
+  padding: 0 5px;
+  pointer-events: none;
+  position: absolute;
+  top: 65%;
+  transform: translateY(-83%);
+  transition: top 0.3s, font-size 0.3s;
+}
+
+.input-container:not(:focus-within) input:not(:placeholder-shown) + label,
+.input-container:focus-within label {
+  top: -0.5px;
+  font-size: 12px;
+  color: var(--preto);
+  border: 1px solid var(--preto);
+  border-bottom: none;
+  border-radius: 3px 3px 0 0;
+}
