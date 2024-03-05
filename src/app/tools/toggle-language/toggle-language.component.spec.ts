@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HeaderComponent } from './header.component';
+import { ToggleLanguageComponent } from './toggle-language.component';
 
-describe('HeaderComponent', () => {
-  let component: HeaderComponent;
-  let fixture: ComponentFixture<HeaderComponent>;
+describe('ToggleLanguageComponent', () => {
+  let component: ToggleLanguageComponent;
+  let fixture: ComponentFixture<ToggleLanguageComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [HeaderComponent]
+      imports: [ToggleLanguageComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(HeaderComponent);
+    fixture = TestBed.createComponent(ToggleLanguageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

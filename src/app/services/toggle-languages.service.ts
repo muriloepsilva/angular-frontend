@@ -4,21 +4,24 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class LanguageService {
-  private currentLanguage: string = 'pt'; // Idioma padrão (inglês)
+  private currentLanguage: string = 'pt';
   private translations: any = {
     en: {
-      // Traduções em inglês
-      title: 'Welcome to My App',
-      toggleLanguage: 'Change Language',
-      // Outros textos...
+      'login-form': {
+        title: 'Log in to the platform',
+        inputPassword: 'Password',
+        enterButton: 'Log in',
+        showPassword: 'Show password',
+      },
     },
     pt: {
-      // Traduções em português
-      title: 'Bem-vindo ao Meu App',
-      toggleLanguage: 'Trocar idioma',
-      // Outros textos...
+      'login-form': {
+        title: 'Entre na plataforma',
+        inputPassword: 'Senha',
+        enterButton: 'Entrar',
+        showPassword: 'Mostrar senha',
+      },
     },
-    // Adicione mais idiomas e suas traduções conforme necessário
   };
 
   constructor() {}
@@ -31,11 +34,12 @@ export class LanguageService {
     this.currentLanguage = language;
   }
 
-  getTranslation(key: string): string {
-    return this.translations[this.currentLanguage][key] || '';
+  getTranslation(key: string, component: string): string {
+    console.log(this.currentLanguage);
+    return this.translations[this.currentLanguage][component][key] || '';
   }
 
   toggleLanguage(): void {
-    this.currentLanguage = this.currentLanguage === 'en' ? 'pt' : 'en'; // Alternar entre inglês e português
+    this.currentLanguage = this.currentLanguage === 'en' ? 'pt' : 'en';
   }
 }

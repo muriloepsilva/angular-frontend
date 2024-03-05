@@ -27,4 +27,8 @@ export class LoginCardComponent {
   getCurrentLanguage() {
     return this.languageService.getCurrentLanguage();
   }
+
+  getText(textToTranslate: string): string {
+    return this.languageService.getTranslation(textToTranslate, 'login-form');
+  }
 }
