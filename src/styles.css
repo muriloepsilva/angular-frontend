@@ -1,9 +1,7 @@
 @import "paleta-cores.css";
 
 body {
-  background: linear-gradient(to bottom, var(--cinza-claro), var(--branco))
-    no-repeat;
   color: var(--preto);
-
+  background-image: url(../src/assets/background.png);
   font-family: "Open Sans", sans-serif;
 }
