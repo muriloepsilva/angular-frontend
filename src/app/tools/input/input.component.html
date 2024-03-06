@@ -1,4 +1,9 @@
-<div class="input-container">
-  <input type="{{ type }}" id="{{ inputId }}" placeholder=" " />
+<div class="input-container" [formGroup]="formGroupName">
+  <input
+    type="{{ type }}"
+    id="{{ inputId }}"
+    placeholder=" "
+    formControlName="{{ name }}"
+  />
   <label for="{{ inputId }}">{{ label }}</label>
 </div>
