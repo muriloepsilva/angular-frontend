@@ -1,6 +1,6 @@
 import { NgOptimizedImage } from '@angular/common';
 import { Component } from '@angular/core';
-import { LanguageService } from '../../services/toggle-languages.service';
+import { LanguageService } from './services/toggle-languages.service';
 
 @Component({
   selector: 'app-toggle-language',
