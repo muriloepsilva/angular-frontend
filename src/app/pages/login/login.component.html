@@ -1,45 +1,49 @@
 <app-toggle-language />
-<div class="login-card">
-  <h1>{{ getText("title") }}</h1>
-  <form class="login-form">
-    <app-input
-      type="email"
-      label="Email"
-      name="email"
-      [required]="true"
-      [formGroupName]="formLogin"
-    />
-    <div class="password-toggle">
-      <div class="input-container">
-        <app-input
-          type="{{ hidePassword ? 'password' : 'text' }}"
-          label="{{ getText('inputPassword') }}"
-          name="senha"
-          [required]="true"
-          [formGroupName]="formLogin"
-        />
+<div class="global-div">
+  <div class="login-card">
+    <h1>{{ getText("title") }}</h1>
+    <form class="login-form">
+      <app-input
+        type="email"
+        label="Email"
+        name="email"
+        [required]="true"
+        [formGroupName]="formLogin"
+      />
+      <div class="password-toggle">
+        <div class="input-container">
+          <app-input
+            type="{{ hidePassword ? 'password' : 'text' }}"
+            label="{{ getText('inputPassword') }}"
+            name="senha"
+            [required]="true"
+            [formGroupName]="formLogin"
+          />
 
-        <div class="tooltip">
-          <button
-            type="button"
-            class="toggle-button"
-            (click)="togglePasswordVisibility()"
-          >
-            <span *ngIf="hidePassword"><fa-icon [icon]="faEye"></fa-icon></span>
-            <span *ngIf="!hidePassword"
-              ><fa-icon [icon]="faEyeSlash"></fa-icon
-            ></span>
-          </button>
-          <span class="tooltiptext">{{ getText("showPassword") }}</span>
+          <div class="tooltip">
+            <button
+              type="button"
+              class="toggle-button"
+              (click)="togglePasswordVisibility()"
+            >
+              <span *ngIf="hidePassword"
+                ><fa-icon [icon]="faEye"></fa-icon
+              ></span>
+              <span *ngIf="!hidePassword"
+                ><fa-icon [icon]="faEyeSlash"></fa-icon
+              ></span>
+            </button>
+            <span class="tooltiptext">{{ getText("showPassword") }}</span>
+          </div>
         </div>
       </div>
-    </div>
 
-    <app-button
-      type="button"
-      buttonText="{{ getText('enterButton') }}"
-      [enable]="formLogin.valid"
-      (submit)="loginUser()"
-    />
-  </form>
+      <app-button
+        type="button"
+        buttonText="{{ getText('enterButton') }}"
+        [enable]="formLogin.valid"
+        (submit)="loginUser()"
+      />
+    </form>
+  </div>
 </div>

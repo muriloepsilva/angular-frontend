@@ -24,8 +24,6 @@ export class AuthService {
 
   isAuthenticated(): boolean {
     const usuario = JSON.parse(localStorage.getItem('loggedUser')!);
-    console.log(typeof usuario);
-    console.log(usuario);
 
     if (usuario) return true;
     return false;

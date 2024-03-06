@@ -1,4 +1,11 @@
 @import "../../../paleta-cores.css";
+
+.global-div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .login-card {
   display: flex;
   flex-direction: column;
