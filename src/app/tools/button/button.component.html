@@ -1,1 +1,8 @@
-<button type="{{ type }}">{{ buttonText }}</button>
+<button
+  type="{{ type }}"
+  [disabled]="!enable"
+  [ngClass]="enable ? 'enable-button' : 'disable-button'"
+  (click)="submit()"
+>
+  {{ buttonText }}
+</button>

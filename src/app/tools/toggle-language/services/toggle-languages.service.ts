@@ -35,7 +35,6 @@ export class LanguageService {
   }
 
   getTranslation(key: string, component: string): string {
-    console.log(this.currentLanguage);
     return this.translations[this.currentLanguage][component][key] || '';
   }
 

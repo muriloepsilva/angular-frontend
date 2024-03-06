@@ -1,5 +1,21 @@
-button {
+.enable-button {
   background-color: var(--vinho);
+  color: var(--branco);
+
+  border: none;
+  border-radius: 50px;
+
+  margin-top: 2%;
+
+  width: 20.5em;
+  height: 40px;
+  padding: 2.5%;
+
+  font-size: medium;
+}
+
+.disable-button {
+  background-color: var(--cinza-claro);
   color: var(--branco);
 
   border: none;
