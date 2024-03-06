@@ -2,6 +2,7 @@
 
 body {
   color: var(--preto);
-  background-image: url(../src/assets/background.png);
+  background: url(../src/assets/background.png) no-repeat center center fixed;
+  background-size: cover;
   font-family: "Open Sans", sans-serif;
 }
