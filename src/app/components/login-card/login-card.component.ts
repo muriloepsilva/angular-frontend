@@ -4,7 +4,7 @@ import { ButtonComponent } from '../../tools/button/button.component';
 import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
-import { LanguageService } from '../../services/toggle-languages.service';
+import { LanguageService } from '../../tools/toggle-language/services/toggle-languages.service';
 
 @Component({
   selector: 'app-login-card',
