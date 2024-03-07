@@ -1,4 +1,10 @@
-@import "../../../paleta-cores.css";
+@import "../../../utils/paleta-cores.css";
+
+.page-header {
+  display: flex;
+  justify-content: end;
+  flex-direction: row;
+}
 
 .global-div {
   width: 100%;
@@ -28,12 +34,11 @@
 }
 
 .input-container {
-  /* position: relative; */
   display: flex;
 }
 
 .input-container input {
-  padding-right: 40px; /* Espaço para o botão */
+  padding-right: 40px;
 }
 
 .input-container .toggle-button {

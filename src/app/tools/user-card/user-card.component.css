@@ -1,0 +1,39 @@
+@import "../../../utils/paleta-cores.css";
+.user-card {
+  background-color: var(--branco);
+  width: 200px;
+  border: 2px solid var(--vinho);
+  border-radius: 10px;
+  box-shadow: 2px 5px 15px var(--cinza-claro);
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  padding: 5%;
+}
+
+.user-card:hover {
+  border: 2px solid var(--vermelho);
+  cursor: pointer;
+}
+
+.nome {
+  font-size: medium;
+  margin-bottom: 2%;
+}
+
+.email,
+.funcao {
+  font-size: x-small;
+}
+
+.card-buttons {
+  width: 100%;
+  margin-top: 10%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.open-modal-button {
+  display: flex;
+  justify-content: end;
+}

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { userInterface } from '../../../interfaces/user';
+import { ExibicaoUsuariosComponent } from '../../pages/exibicao-usuarios/exibicao-usuarios.component';
 
 @Injectable({
   providedIn: 'root',

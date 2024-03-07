@@ -1,4 +1,4 @@
-@import "../../../paleta-cores.css";
+@import "../../../utils/paleta-cores.css";
 
 .input-container {
   display: flex;
