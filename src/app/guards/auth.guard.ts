@@ -13,7 +13,7 @@ export class LoggedInGuard implements CanActivate {
       return true;
     }
 
-    // this.routerService.navigate(['/']);
+    this.routerService.navigate(['/']);
     return false;
   }
 }
