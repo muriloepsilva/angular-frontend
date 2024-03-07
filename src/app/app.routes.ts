@@ -11,4 +11,8 @@ export const routes: Routes = [
     component: ExibicaoUsuariosComponent,
     canActivate: [authGuard],
   },
+  {
+    path: '**',
+    redirectTo: '/',
+  },
 ];

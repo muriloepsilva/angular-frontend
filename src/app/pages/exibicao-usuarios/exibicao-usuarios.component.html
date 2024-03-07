@@ -1,3 +1,21 @@
-<div class="page-header">
-  <app-toggle-language />
+<div class="global-div">
+  <div class="page-header">
+    <app-toggle-language />
+
+    <div class="tooltip">
+      <button class="logout-button" (click)="logoutUser()">
+        <fa-icon [icon]="rightFromBracket"></fa-icon>
+      </button>
+      <span class="tooltiptext">{{ getText("logoutButton") }}</span>
+    </div>
+  </div>
+  <h1>{{ getText("userListTitle") }}</h1>
+  <div class="exibicao-usuarios">
+    <app-user-card
+      *ngFor="let user of users"
+      [nome]="user.nome"
+      [email]="user.email"
+      [funcao]="user.nivel"
+    />
+  </div>
 </div>

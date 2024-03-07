@@ -63,4 +63,10 @@ export class LoginComponent {
 
     this.route.navigate(['/usuarios']);
   }
+
+  ngAfterViewInit(): void {
+    if (this.authService.isAuthenticated()) {
+      this.route.navigate(['/usuarios']);
+    }
+  }
 }

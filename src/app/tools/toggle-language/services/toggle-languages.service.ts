@@ -10,8 +10,12 @@ export class LanguageService {
       'login-form': {
         title: 'Log in to the platform',
         inputPassword: 'Password',
-        enterButton: 'Log in',
+        enterButton: 'Login',
         showPassword: 'Show password',
+      },
+      'exibicao-usuarios': {
+        logoutButton: 'Logout',
+        userListTitle: 'Plataform users',
       },
     },
     pt: {
@@ -20,6 +24,10 @@ export class LanguageService {
         inputPassword: 'Senha',
         enterButton: 'Entrar',
         showPassword: 'Mostrar senha',
+      },
+      'exibicao-usuarios': {
+        logoutButton: 'Sair',
+        userListTitle: 'Usuários da plataforma',
       },
     },
   };
