@@ -4,11 +4,12 @@ import {
   faArrowUpRightFromSquare,
   faRightFromBracket,
 } from '@fortawesome/free-solid-svg-icons';
+import { ModalUsuarioComponent } from '../modal-usuario/modal-usuario.component';
 
 @Component({
   selector: 'app-user-card',
   standalone: true,
-  imports: [FontAwesomeModule],
+  imports: [FontAwesomeModule, ModalUsuarioComponent],
   templateUrl: './user-card.component.html',
   styleUrl: './user-card.component.css',
 })
@@ -19,9 +20,8 @@ export class UserCardComponent {
 
   arrowUpRightFromSquare = faArrowUpRightFromSquare;
 
-  test() {
-    console.log(this.nome);
-    console.log(this.email);
-    console.log(this.funcao);
+  public modalIsOpen: boolean = false;
+  changeModalState() {
+    this.modalIsOpen = !this.modalIsOpen;
   }
 }
