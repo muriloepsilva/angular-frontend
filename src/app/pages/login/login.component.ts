@@ -10,6 +10,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../../services/authService/auth.service';
 import { userInterface } from '../../../interfaces/user';
 import { Router } from '@angular/router';
+import { ToasterComponent } from '../../tools/toaster/toaster.component';
 
 @Component({
   selector: 'app-login',
@@ -20,6 +21,7 @@ import { Router } from '@angular/router';
     InputComponent,
     CommonModule,
     FontAwesomeModule,
+    ToasterComponent,
   ],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css',
@@ -28,6 +30,7 @@ export class LoginComponent {
   hidePassword: boolean = true;
   faEye = faEye;
   faEyeSlash = faEyeSlash;
+  showWarningToaster = false;
 
   togglePasswordVisibility(): void {
     this.hidePassword = !this.hidePassword;
@@ -60,8 +63,10 @@ export class LoginComponent {
     );
 
     if (user) localStorage.setItem('loggedUser', JSON.stringify(user));
-
-    this.route.navigate(['/usuarios']);
+    else {
+      this.showWarningToaster = true;
+      this.route.navigate(['/usuarios']);
+    }
   }
 
   ngAfterViewInit(): void {
