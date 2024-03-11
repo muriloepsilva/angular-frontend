@@ -65,8 +65,8 @@ export class LoginComponent {
     if (user) localStorage.setItem('loggedUser', JSON.stringify(user));
     else {
       this.showWarningToaster = true;
-      this.route.navigate(['/usuarios']);
     }
+    this.route.navigate(['/usuarios']);
   }
 
   ngAfterViewInit(): void {
