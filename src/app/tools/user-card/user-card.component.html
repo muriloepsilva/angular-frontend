@@ -1,11 +1,22 @@
 <div class="user-card">
-  <div class="card-itens" (click)="test()">
+  <div class="card-itens" (click)="changeModalState()">
     <div class="nome">{{ nome }}</div>
     <div class="email">{{ email }}</div>
     <div class="funcao">{{ funcao }}</div>
   </div>
 
-  <div class="open-modal-button">
+  <div class="open-modal-button" (click)="changeModalState()">
     <span><fa-icon [icon]="arrowUpRightFromSquare"></fa-icon></span>
   </div>
+
+  @if (modalIsOpen){
+  <app-modal-usuario
+    [nome]="nome"
+    [email]="email"
+    [funcao]="funcao"
+    (modalClose)="changeModalState()"
+  />
+  }
 </div>
+
+<!-- Fazer popup para senha incorreta -->

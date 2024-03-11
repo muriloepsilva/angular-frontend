@@ -8,12 +8,42 @@ import { ExibicaoUsuariosComponent } from '../../pages/exibicao-usuarios/exibica
 export class AuthService {
   constructor() {}
 
-  private users: any = [
+  public users: any = [
     {
-      nome: 'Murilo',
+      nome: 'Murilo Penha',
       email: 'murilo.penha@fraga.com.br',
-      senha: 'murilo123',
-      nivel: 1,
+      senha: 'murilo.penha',
+      nivel: 'Fraga',
+    },
+    {
+      nome: 'Cainã Giarola',
+      email: 'caina.giarola@fraga.com.br',
+      senha: 'caina.giarola',
+      nivel: 'ADM',
+    },
+    {
+      nome: 'Julio Viana',
+      email: 'julio.viana@fraga.com.br',
+      senha: 'julio.viana',
+      nivel: 'Cliente',
+    },
+    {
+      nome: 'Rafael Oliveira Silva',
+      email: 'rafael.oliveira@fraga.com.br',
+      senha: 'rafael.oliveira',
+      nivel: 'Fraga',
+    },
+    {
+      nome: 'Rafael Vellone de Carvalho',
+      email: 'rafael.carvalho@fraga.com.br',
+      senha: 'rafael.carvalho',
+      nivel: 'ADM',
+    },
+    {
+      nome: 'Murilo Silva',
+      email: 'murilo.silva@fraga.com.br',
+      senha: 'murilo.silva',
+      nivel: 'Cliente',
     },
   ];
 

@@ -1,0 +1,11 @@
+<div class="modal">
+  <button (click)="modalClose()">X</button>
+  <input type="text" placeholder="{{ nome }}" />
+  <input type="email" placeholder="{{ email }}" />
+  <input type="text" placeholder="{{ funcao }}" />
+  @if(exibirBotoes()){
+  <button>Editar</button>
+  <button>Excluir</button>
+  }
+</div>
+<div class="overlay"></div>
