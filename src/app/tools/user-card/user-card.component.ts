@@ -4,7 +4,7 @@ import {
   faArrowUpRightFromSquare,
   faRightFromBracket,
 } from '@fortawesome/free-solid-svg-icons';
-import { ModalUsuarioComponent } from '../modal-usuario/modal-usuario.component';
+import { ModalUsuarioComponent } from '../../pages/modal-usuario/modal-usuario.component';
 
 @Component({
   selector: 'app-user-card',

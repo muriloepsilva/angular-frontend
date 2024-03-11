@@ -1,10 +1,9 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { InputComponent } from '../input/input.component';
 
 @Component({
   selector: 'app-modal-usuario',
   standalone: true,
-  imports: [InputComponent],
+  imports: [],
   templateUrl: './modal-usuario.component.html',
   styleUrl: './modal-usuario.component.css',
 })
