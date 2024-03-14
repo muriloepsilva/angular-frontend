@@ -9,6 +9,35 @@
   top: 50%;
   transform: translate(-50%, -50%);
   z-index: 11;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.modal-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.modal-header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-bottom: 2%;
+}
+
+.modal-header span {
+  width: 100%;
 }
 
 .overlay {

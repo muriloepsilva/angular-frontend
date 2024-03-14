@@ -48,4 +48,8 @@ export class ExibicaoUsuariosComponent {
   }
 
   public users = this.authService.users;
+  getCurrentUserName() {
+    const user = JSON.parse(this.authService.getCurrentUser()!);
+    return user.name;
+  }
 }

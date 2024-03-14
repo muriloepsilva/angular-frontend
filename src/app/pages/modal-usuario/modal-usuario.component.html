@@ -1,11 +1,18 @@
 <div class="modal">
-  <button (click)="modalClose()">X</button>
-  <input type="text" placeholder="{{ nome }}" />
-  <input type="email" placeholder="{{ email }}" />
-  <input type="text" placeholder="{{ funcao }}" />
-  @if(exibirBotoes()){
-  <button>Editar</button>
-  <button>Excluir</button>
-  }
+  <div class="modal-header">
+    <span>Usuário</span>
+    <button (click)="modalClose()">X</button>
+  </div>
+  <div class="modal-body">
+    <input type="text" placeholder="{{ nome }}" />
+    <input type="email" placeholder="{{ email }}" />
+    <input type="text" placeholder="{{ funcao }}" />
+  </div>
+  <div class="modal-footer">
+    @if(exibirBotoes()){
+    <button>Editar</button>
+    <button>Excluir</button>
+    }
+  </div>
 </div>
 <div class="overlay"></div>

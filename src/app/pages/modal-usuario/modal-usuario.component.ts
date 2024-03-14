@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { AuthService } from '../../services/authService/auth.service';
 
 @Component({
   selector: 'app-modal-usuario',
@@ -13,11 +14,13 @@ export class ModalUsuarioComponent {
   @Input() funcao: string = '';
   @Output('modalClose') onClick = new EventEmitter();
 
+  constructor(private AuthService: AuthService) {}
+
   modalClose() {
     this.onClick.emit();
   }
 
-  currentUser = JSON.parse(localStorage.getItem('loggedUser')!);
+  currentUser = JSON.parse(this.AuthService.getCurrentUser()!);
 
   exibirBotoes() {
     if (

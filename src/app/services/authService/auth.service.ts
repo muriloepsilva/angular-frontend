@@ -59,4 +59,8 @@ export class AuthService {
     if (usuario) return true;
     return false;
   }
+
+  getCurrentUser(): string {
+    return localStorage.getItem('loggedUser')!;
+  }
 }
